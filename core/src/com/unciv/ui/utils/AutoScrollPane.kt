@@ -6,7 +6,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane
 import com.badlogic.gdx.scenes.scene2d.ui.Skin
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener
 
-/*
+/**
         ** Problem **
         Standard LibGdx ScrollPane widgets support vertical scrolling by a mouse wheel.
         That works once they have 'Scroll focus' (there's keyboard focus, too) - e.g. once they
@@ -15,7 +15,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener
 
         ** Approach **
         Listen to enter and exit events and set focus as needed.
-        The old focus is saved on eneter and restored on exit to make this as side-effect free as possible.
+        The old focus is saved on enter and restored on exit to make this as side-effect free as possible.
 
         ** Implementation **
         The listener is attached per widget (and not, say, to an upper container or the screen, where
